@@ -1,0 +1,28 @@
+#######################################
+# Syntax Coloring Map For LiFuelGauge #
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)                #
+#######################################
+
+LiFuelGauge	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)    #
+#######################################
+
+getVoltage	KEYWORD2
+getSOC	KEYWORD2
+getCurrent	KEYWORD2
+getTemperature	KEYWORD2
+getTTE	KEYWORD2
+getTTF	KEYWORD2
+reset	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)                #
+#######################################
+
+MAX17043	LITERAL1
+MAX17044	LITERAL1
