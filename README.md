@@ -2,6 +2,8 @@
 Library for MAX17201 and 172015 i2c LI fuel gauges. Download ZIP and include with Arduino. Tested with ESP8266 Nodemcu.
 
 
+---
+
 #### License
 
 All our projects are as usefully open-source as possible.
