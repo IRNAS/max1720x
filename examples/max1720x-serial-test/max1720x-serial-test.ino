@@ -10,14 +10,14 @@ max1720x gauge;
 
 void setup()
 {
-    Serial.begin(115200); // Initializes serial port
+    Serial.begin(115200);                               // Initializes serial port
     // Waits for serial port to connect. Needed for Leonardo only
     while ( !Serial );  
-    gauge.reset();  // Resets MAX1720x
-    delay(200);  // Waits for the initial measurements to be made
-    gauge.resetMaxMinAvgCurrent();
+    gauge.reset();                                      // Resets MAX1720x
+    delay(200);                                         // Waits for the initial measurements to be made
+    gauge.resetMaxMinAvgCurrent();                      // resets the min max avg current register
     delay(200);
-    gauge.setCurrentAvgTime(4);
+    gauge.setCurrentAvgTime(4);                         // sets the update time to 5s
     delay(200);
 }
 
@@ -25,34 +25,34 @@ void loop()
 {
     Serial.println("-------------------------------");
     Serial.print("Capacity: ");
-    Serial.print(gauge.getCapacity());  // Gets the battery's state of charge
+    Serial.print(gauge.getCapacity());                  // Gets the battery state of charge
     Serial.println(" mAh");
     Serial.print("TTE: ");
-    Serial.print(gauge.getTTE());  // Gets the battery's state of charge
+    Serial.print(gauge.getTTE());                       // Gets the battery state of charge
     Serial.println(" s"); 
     Serial.print("TTF: ");
-    Serial.print(gauge.getTTF());  // Gets the battery's state of charge
+    Serial.print(gauge.getTTF());                       // Gets the battery state of charge
     Serial.println(" s");
     Serial.print("Current: ");
-    Serial.print(gauge.getCurrent());  // Gets the battery's state of charge
+    Serial.print(gauge.getCurrent());                   // Gets the battery state of charge
     Serial.println(" mA");
     Serial.print("Average current: ");
-    Serial.print(gauge.getAvgCurrent());  // Gets the battery's state of charge
+    Serial.print(gauge.getAvgCurrent());                // Gets the battery state of charge
     Serial.println(" mA");
     Serial.print("Max current: ");
-    Serial.print(gauge.getMaxCurrent());
+    Serial.print(gauge.getMaxCurrent());                // Gets the battery max current since reset
     Serial.println(" mA");
     Serial.print("Min Current: ");
-    Serial.print(gauge.getMinCurrent());
+    Serial.print(gauge.getMinCurrent());                // Gets the battery min current since reset
     Serial.println(" mA");
     Serial.print("Temperature: ");
-    Serial.print(gauge.getTemperature());  // Gets the battery's state of charge
+    Serial.print(gauge.getTemperature());               // Gets the battery's state of charge
     Serial.println(" degC");
     Serial.print("SOC: ");
-    Serial.print(gauge.getSOC());  // Gets the battery's state of charge
+    Serial.print(gauge.getSOC());                       // Gets the battery's state of charge
     Serial.println("%");
     Serial.print("VCELL: ");
-    Serial.print(gauge.getVoltage());  // Gets the battery voltage
+    Serial.print(gauge.getVoltage());                   // Gets the battery voltage
     Serial.println("mV");
     Serial.print("Battery status: ");
     Serial.print(gauge.getBatteryStatus() ? "Battery not present" : "Battery present");
