@@ -1,6 +1,37 @@
-# max1720x
+# max1720xgetMinCurrent()` setCurrentAvgTime(int input_value)
 Library for MAX17201 and 172015 i2c LI fuel gauges. Download ZIP and include with Arduino. Tested with ESP8266 Nodemcu.
 
+### Modification Aug 2017
+Cleaned up the code a bit, added more comments and some useful functions.
+
+#### All functions:
+```getVoltage()``` - gets the lowest cell voltage in mV
+
+```getSOC()``` - LiIon Polymer battery as a percentage of the full capacity w/ resolution 1/256%
+
+```getTemperature()``` - gets the getTemperature
+
+```getCurrent()``` - gets the current in mA
+
+```getAvgCurrent()``` - gets the average current consumption
+
+```getMaxCurrent()``` - gets the max current since reset
+
+```getMinCurrent()``` - gets the min current since reset
+
+```getCapacity()``` - gets the current capacity of the batteries
+
+```getTTE()``` - time left till empty
+
+```getTTF()``` - time left till full
+
+```reset()``` - resets the chip
+
+```getBatteryStatus()``` - checks if the battery is present
+
+```resetMaxMinAvgCurrent()``` - resets the maxmin avg current register
+
+```setCurrentAvgTime(int input_value)``` - sets the current avg time based on input_value
 
 ---
 
